@@ -118,8 +118,8 @@ function Home({ isSignedIn, contractId, wallet }) {
                       path="/booking"
                       element={
                         <Booking
-                          contractId={contractId}
-                          wallet={wallet}
+                          contractId={{contractId}}
+                          wallet={{wallet}}
                           home_id={e.home_id}
                         />
                       }

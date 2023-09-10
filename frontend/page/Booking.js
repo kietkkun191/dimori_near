@@ -12,12 +12,12 @@ function Booking({ contractId, wallet, home_id }) {
     e.preventDefault();
     const { fromdate, todate } = e.target.elements;
     // use the wallet to send the greeting to the contract
-    
-    let _from_date = new Date(fromdate.value).getTime() / 1000
-    let _to_date = new Date(todate.value).getTime() / 1000
+
+    let _from_date = new Date(fromdate.value).getTime() / 1000;
+    let _to_date = new Date(todate.value).getTime() / 1000;
     const dayToSeconds = 86400;
 
-    let duration = (_to_date - _from_date) / dayToSeconds
+    let duration = (_to_date - _from_date) / dayToSeconds;
 
     wallet
       .callMethod({
