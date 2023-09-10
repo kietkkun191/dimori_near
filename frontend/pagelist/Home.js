@@ -40,6 +40,11 @@ function Home({ isSignedIn, contractId, wallet }) {
     navigate("/booking");
   };
 
+  const naviageAddRental = () => {
+    // 👇️ navigate to /contacts
+    navigate("/add-rental");
+  };
+
   return (
     <>
       <div className="topBanner">
