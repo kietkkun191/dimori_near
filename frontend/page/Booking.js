@@ -2,7 +2,7 @@ import "regenerator-runtime/runtime";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../assets/global.css";
+import "../assets/Popup.css";
 
 function Booking({ contractId, wallet, home_id }) {
   const [uiPleaseWait, setUiPleaseWait] = React.useState(false);
@@ -66,7 +66,7 @@ function Booking({ contractId, wallet, home_id }) {
             </tbody>
           </table>
           <button>
-            <span>Save</span>
+            <span>Book</span>
             <div className="loader"></div>
           </button>
         </form>

@@ -1,7 +1,7 @@
 import "regenerator-runtime/runtime";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../assets/global.css";
+import "../assets/AddRentals.css";
 
 import { SignInPrompt, SignOutButton } from "../ui-components";
 
@@ -47,17 +47,32 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
 
   return (
     <>
-      <SignOutButton
-        accountId={wallet.accountId}
-        onClick={() => wallet.signOut()}
-      />
+      <div className="topBanner">
+        <div>
+          <Link to="/">
+            <img
+              className="logo"
+              src={logo}
+              alt="logo"
+              style={{ height: "70px" }}
+            ></img>
+          </Link>
+        </div>
+        <h2 class="headerText">All Rentals</h2>
+        <div className="lrContainers">
+          <SignOutButton
+            accountId={wallet.accountId}
+            onClick={() => wallet.signOut()}
+          />
+        </div>
+      </div>
+      <hr className="line1" />
       <main className={uiPleaseWait ? "please-wait" : ""}>
         <form onSubmit={addHome} className="change">
-          <label>Add home:</label>
           <div className="addRentalContent row">
             <div className="row">
               <div className="rentalContent col-8">
-                <table>
+                <table className="pure-table pure-table-horizontal marginTable">
                   <tbody>
                     <tr>
                       <td>

@@ -25,7 +25,9 @@ function YourRentals({ isSignedIn, contractId, wallet }) {
 
   const getRentalsList = async () => {
     const rentals = await getGreeting();
-    const items = rentals.map((r) => r[1]).filter((r) => r.owner == wallet.accountId);
+    const items = rentals
+      .map((r) => r[1])
+      .filter((r) => r.owner == wallet.accountId);
     console.log(items);
     setValueFromBlockchain(items);
   };
@@ -49,10 +51,23 @@ function YourRentals({ isSignedIn, contractId, wallet }) {
 
   return (
     <>
-      <SignOutButton
-        accountId={wallet.accountId}
-        onClick={() => wallet.signOut()}
-      />
+      <div>
+        <Link to="/">
+          <img
+            className="logo"
+            src={logo}
+            alt="logo"
+            style={{ height: "70px" }}
+          ></img>
+        </Link>
+      </div>
+      <h2 class="headerText">All Rentals</h2>
+      <div className="lrContainers">
+        <SignOutButton
+          accountId={wallet.accountId}
+          onClick={() => wallet.signOut()}
+        />
+      </div>
       {valueFromBlockchain.map((e, i) => {
         return (
           <div className="itemDiv" key={i}>
@@ -60,9 +75,7 @@ function YourRentals({ isSignedIn, contractId, wallet }) {
               <tbody>
                 <tr>
                   <td>Ten phong na:</td>
-                  <td>
-                    {e.name}
-                  </td>
+                  <td>{e.name}</td>
                 </tr>
                 <tr>
                   <td>Dia chi na:</td>

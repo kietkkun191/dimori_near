@@ -29,9 +29,6 @@ main {
   max-width: 26em;
 }
 
-main.please-wait {
-}
-
 h1 {
   background-image: url(./logo-black.svg);
   background-position: center 1em;
@@ -362,4 +359,11 @@ main.please-wait .loader:after{
   box-shadow: rgba(0, 0, 0, 0.8) 5px 15px 15px;
   color: #00aed0;
   border-radius: 10px;
+}
+
+.topBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }

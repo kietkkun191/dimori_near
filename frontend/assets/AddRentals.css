@@ -1,0 +1,146 @@
+.searchReminder {
+    width: 400px;
+    border: 1.5px solid rgb(242, 242, 242);
+    border-radius: 100px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+  }
+  
+  .marginTable {
+    align-items: center;
+  }
+  
+  .filter {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+  }
+  
+  .headerText {
+    text-align: center;
+    font-family: "Roboto, Helvetica, sans-serif";
+    color: #00aed0;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  .searchFiltersIcon {
+    background-color: #00aed0;
+    padding: 7px;
+    border-radius: 50%;
+  }
+  
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #00aed0 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    border: 1px solid transparent !important;
+    padding: 0.375rem 0.75rem !important;
+    font-size: 1rem !important;
+    border-radius: 0.25rem !important;
+    display: inline-block !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+  }
+  
+  .form-control {
+    width: 150% !important;
+  }
+  
+  .line {
+    border-top: 1px solid rgb(24, 23, 23);
+    margin-bottom: 0px;
+  }
+  
+  .line2 {
+    border-top: 0.5px solid rgb(230, 230, 230);
+    margin: 30px 0px;
+  }
+  
+  .addRentalContent {
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba(200, 200, 200, 0.4);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 15px 15px;
+  }
+  
+  .rentalContent {
+    padding: 10px;
+  }
+  
+  .rentalDiv {
+    display: flex;
+    justify-content: space-around;
+    color: #00aed0;
+  }
+  
+  .rentalDivH {
+    animation: mymove 3s;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+  }
+  
+  @keyframes mymove {
+    from {
+      background-color: #dddddd;
+    }
+  
+    to {
+      background-color: #dddddd00;
+    }
+  }
+  
+  
+  .form-control.standard {
+    background-color: #fff;
+    color: #000;
+  }
+  .MuiInputLabel-root {
+    color: #fff;
+  }
+  
+  .form-control {
+    width: 100% !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    color: #000 !important;
+    border-radius: 25px !important;
+    border: none !important;
+  }
+  
+  .form-control::placeholder {
+    opacity: 0.9 !important;
+    color: #00aed0 !important;
+  }
+  
+  .buttonContainerCenter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding: 20px;
+  }
+  
+  .detailImg {
+    margin-top: -10px;
+    padding: 10px;
+  }
+  
+  .formControlStyles {
+    box-sizing: border-box;
+  }

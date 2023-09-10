@@ -356,6 +356,510 @@ main.please-wait .loader, main.please-wait .loader:after {
   box-shadow: 5px 15px 15px #000c;
 }
 
+.topBanner {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
+.topBanner {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
+.lrContainers {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.line {
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin: 40px 0;
+}
+
+.popupRentalContent {
+  background-color: #c8c8c866;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 15px 15px #0009;
+}
+
+.popupContent, td {
+  padding: 10px;
+}
+
+p {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+button {
+  margin-top: 40px;
+  padding: 10px 20px;
+}
+
+.btn-outline-secondary {
+  color: wheat;
+  background-color: #0000;
+  background-image: none;
+  border-color: wheat;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: wheat;
+  border-color: wheat;
+}
+
+.btn-outline-dark {
+  color: #00aed0;
+  background-color: #0000;
+  background-image: none;
+  border-color: #00aed0;
+}
+
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: #00aed0;
+  border-color: #00aed0;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+  color: #fff !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-color: #00aed0 !important;
+  border: 1px solid #0000 !important;
+  border-radius: .25rem !important;
+  padding: .375rem .75rem !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+.label {
+  color: #00aed0;
+  font-weight: bold;
+}
+
+.labelDetail {
+  color: #00aed0;
+}
+
+.price-pop {
+  color: #00aed0;
+  justify-content: end;
+  gap: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  font-size: 12px;
+  display: flex;
+}
+
+.buttonContainerCenter {
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+}
+
+.buttonContainerEnd {
+  justify-content: end;
+  align-items: flex-end;
+  padding: 20px;
+  display: flex;
+}
+
+.rentalDetail {
+  background-color: #c8c8c833;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+}
+
+.detailImg {
+  margin-top: -10px;
+  padding: 10px;
+}
+
+.editRentalContent {
+  background-color: #0003;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.marginTable {
+  padding-top: 20px;
+}
+
+.pure-table td {
+  padding: 10px;
+}
+
+.formControlStyles {
+  box-sizing: border-box;
+}
+
+.formInput {
+  width: 175px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.topBanner {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
+.searchReminder {
+  color: #00aed0;
+  border: 1.5px solid #c8c8c833;
+  border-radius: 100px;
+  height: 45px;
+  padding-left: 30px;
+  padding-right: 5px;
+  display: flex;
+  box-shadow: 0 5px 15px #0009;
+  justify-content: space-around !important;
+  align-items: center !important;
+  width: 450px !important;
+}
+
+.filter {
+  color: #00aed0;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.searchFiltersIcon {
+  background-color: #00aed0;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+body {
+  background-color: #aae6ee;
+}
+
+.newContainer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 10% 5%;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+  color: #fff !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-color: #00aed0 !important;
+  border: 1px solid #0000 !important;
+  border-radius: .25rem !important;
+  padding: .375rem .75rem !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+.line {
+  border-top: 1px solid #000;
+  margin: 0%;
+}
+
+.line2 {
+  border-top: 1px solid #000;
+  margin-bottom: 0;
+}
+
+.rentalsContent {
+  justify-content: start;
+  height: calc(100vh - 135px);
+  display: flex;
+}
+
+.rentalDiv {
+  justify-content: space-around;
+  display: flex;
+}
+
+.rentalDivH {
+  border-radius: 20px;
+  justify-content: start;
+  animation: 3s mymove;
+  display: flex;
+}
+
+@keyframes mymove {
+  from {
+    background-color: #ddd;
+  }
+
+  to {
+    background-color: #ddd0;
+  }
+}
+
+.imgDiv {
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  padding: 10px;
+  display: flex;
+}
+
+.rentalImg {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.rentalInfo {
+  width: 100%;
+  padding: 10px;
+}
+
+.rentalTitle {
+  color: #000;
+  margin-bottom: 15px;
+  font-family: "ui-monospace";
+  font-size: 23px;
+}
+
+.rentalDesc {
+  color: #00aed0;
+  padding: 1% 5% 0;
+  font-size: 15px;
+}
+
+.bottomButton {
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  padding: 5px;
+  display: flex;
+}
+
+.price {
+  color: #00aed0;
+  justify-content: end;
+  gap: 10px;
+  font-size: 12px;
+  display: flex;
+}
+
+.searchReminder {
+  border: 1.5px solid #f2f2f2;
+  border-radius: 100px;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 45px;
+  padding-left: 30px;
+  padding-right: 5px;
+  display: flex;
+  box-shadow: 0 5px 15px #0009;
+}
+
+.marginTable {
+  align-items: center;
+}
+
+.filter {
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.headerText {
+  text-align: center;
+  color: #00aed0;
+  font-family: "Roboto, Helvetica, sans-serif";
+}
+
+body {
+  background-color: #fff;
+}
+
+.searchFiltersIcon {
+  background-color: #00aed0;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+  color: #fff !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  background-color: #00aed0 !important;
+  border: 1px solid #0000 !important;
+  border-radius: .25rem !important;
+  padding: .375rem .75rem !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  line-height: 1.5 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+}
+
+.form-control {
+  width: 150% !important;
+}
+
+.line {
+  border-top: 1px solid #181717;
+  margin-bottom: 0;
+}
+
+.line2 {
+  border-top: .5px solid #e6e6e6;
+  margin: 30px 0;
+}
+
+.addRentalContent {
+  background-color: #c8c8c866;
+  border-radius: 10px;
+  width: 85%;
+  margin: 0 auto;
+  box-shadow: 0 15px 15px #0009;
+}
+
+.rentalContent {
+  padding: 10px;
+}
+
+.rentalDiv {
+  color: #00aed0;
+  justify-content: space-around;
+  display: flex;
+}
+
+.rentalDivH {
+  border-radius: 20px;
+  justify-content: start;
+  animation: 3s mymove;
+  display: flex;
+}
+
+@keyframes mymove {
+  from {
+    background-color: #ddd;
+  }
+
+  to {
+    background-color: #ddd0;
+  }
+}
+
+.form-control.standard {
+  color: #000;
+  background-color: #fff;
+}
+
+.MuiInputLabel-root {
+  color: #fff;
+}
+
+.form-control {
+  color: #000 !important;
+  background: #0000001a !important;
+  border: none !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+}
+
+.form-control::placeholder {
+  opacity: .9 !important;
+  color: #00aed0 !important;
+}
+
+.buttonContainerCenter {
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+}
+
+.detailImg {
+  margin-top: -10px;
+  padding: 10px;
+}
+
+.formControlStyles {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.App-logo {
+  pointer-events: none;
+  height: 40vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: 20s linear infinite App-logo-spin;
+  }
+}
+
+.App-header {
+  color: #fff;
+  background-color: #282c34;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  display: flex;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.topBanner {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+}
+
 #near-wallet-selector-modal {
   --backdrop-bg: #26262630;
   --heading-color: #222;

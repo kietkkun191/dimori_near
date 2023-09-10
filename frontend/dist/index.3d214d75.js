@@ -27154,7 +27154,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _runtime = require("regenerator-runtime/runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _globalCss = require("./assets/global.css");
+var _appCss = require("./assets/App.css");
 var _reactRouterDom = require("react-router-dom");
 var _yourRentals = require("./pagelist/YourRentals");
 var _yourRentalsDefault = parcelHelpers.interopDefault(_yourRentals);
@@ -27163,172 +27163,6 @@ var _homeDefault = parcelHelpers.interopDefault(_home);
 var _addRentals = require("./page/AddRentals");
 var _addRentalsDefault = parcelHelpers.interopDefault(_addRentals);
 var _uiComponents = require("./ui-components");
-// export default function App({ isSignedIn, contractId, wallet }) {
-//   const [valueFromBlockchain, setValueFromBlockchain] = React.useState();
-//   const [uiPleaseWait, setUiPleaseWait] = React.useState(true);
-//   // Get blockchian state once on component load
-//   const getRentalsList = async () => {
-//     const rentals = await getGreeting();
-//     const items = rentals.map((r) => {
-//       return {
-//         id: r[0],
-//         val: r[1]
-//       };
-//     });
-//     console.log(rentals);
-//     console.log(items);
-//     setValueFromBlockchain(JSON.stringify(items));
-//   };
-//   React.useEffect(() => {
-//     getRentalsList().finally(() => {
-//       setUiPleaseWait(false);
-//     });
-//   }, []);
-//   /// If user not signed-in with wallet - show prompt
-//   if (!isSignedIn) {
-//     // Sign-in flow will reload the page later
-//     return (
-//       <SignInPrompt
-//         greeting={valueFromBlockchain}
-//         onClick={() => wallet.signIn()}
-//       />
-//     );
-//   }
-//   function changeGreeting(e) {
-//     e.preventDefault();
-//     setUiPleaseWait(true);
-//     const { name, address, city, img_url, theme, description, price } = e.target.elements;
-//     // use the wallet to send the greeting to the contract
-//     console.log(name, address, city, img_url, theme, description, price)
-//     wallet
-//       .callMethod({
-//         method: "create_home",
-//         args: {
-//           name: name.value,
-//           address: address.value,
-//           city: city.value,
-//           img_url: img_url.value,
-//           theme: theme.value,
-//           description: description.value,
-//           price: parseInt(price.value),
-//         },
-//         contractId: contractId,
-//       })
-//       .then(async () => {
-//         return getRentalsList();
-//       })
-//       .finally(() => {
-//         setUiPleaseWait(false);
-//       });
-//   }
-//   function getGreeting() {
-//     // use the wallet to query the contract's greeting
-//     return wallet.viewMethod({ method: "get_all_homes", contractId: contractId })
-//   }
-//   const getImage = async (e) => {
-//     e.preventDefault();
-//     const reader = new window.FileReader();
-//     const file = e.target.files[0];
-//     if (file !== undefined) {
-//       reader.readAsArrayBuffer(file);
-//       reader.onloadend = () => {
-//         const buf = Buffer(reader.result, "base64");
-//         setImage(buf);
-//         setImagePreview(file);
-//       };
-//     }
-//   };
-//   return (
-//     <>
-//       <SignOutButton
-//         accountId={wallet.accountId}
-//         onClick={() => wallet.signOut()}
-//       />
-//       <main
-//        className={uiPleaseWait ? "please-wait" : ""}>
-//         <h1>
-//           The contract says:{" "}
-//           <span className="greeting">{valueFromBlockchain}</span>
-//         </h1>
-//         <form onSubmit={changeGreeting} className="change">
-//           <label>Add home:</label>
-//           <table>
-//             <tr>
-//               <td>
-//                 <input
-//                 autoComplete="off"
-//                 defaultValue=""
-//                 id="name"
-//                 placeholder="home name"
-//                 />
-//               </td>
-//               <td>
-//                 <input
-//                 autoComplete="off"
-//                 defaultValue=""
-//                 id="address"
-//                 placeholder="home address"
-//                 />
-//               </td>
-//             </tr>
-//             <tr>
-//               <td>
-//                 <input
-//                 autoComplete="off"
-//                 defaultValue=""
-//                 id="city"
-//                 placeholder="city"
-//                 />
-//               </td>
-//               <td>
-//                 <input
-//                 autoComplete="off"
-//                 defaultValue=""
-//                 id="img_url"
-//                 placeholder="image"
-//                />
-//               </td>
-//             </tr>
-//             <tr>
-//               <td>
-//                 <input
-//                   autoComplete="off"
-//                   defaultValue=""
-//                   id="theme"
-//                   placeholder="home theme"
-//                 />
-//               </td>
-//               <td>
-//                 <input
-//                 autoComplete="off"
-//                 defaultValue=""
-//                 id="description"
-//                 placeholder="description"
-//                 />
-//               </td>
-//             </tr>
-//             <tr>
-//               <td></td>
-//               <td>
-//                 <input
-//                 autoComplete="off"
-//                 defaultValue=""
-//                 id="price"
-//                 type="number"
-//                 placeholder="home price"
-//                 />
-//               </td>
-//             </tr>
-//             <button>
-//               <span>Save</span>
-//               <div className="loader"></div>
-//             </button>
-//           </table>
-//         </form>
-//       </main>
-//     </>
-//   );
-// }
 function App({ isSignedIn, contractId, wallet }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27345,7 +27179,7 @@ function App({ isSignedIn, contractId, wallet }) {
                             }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 195,
+                            lineNumber: 17,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27357,7 +27191,7 @@ function App({ isSignedIn, contractId, wallet }) {
                             }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 205,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27369,23 +27203,23 @@ function App({ isSignedIn, contractId, wallet }) {
                             }, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 215,
+                            lineNumber: 37,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "App.js",
-                    lineNumber: 194,
+                    lineNumber: 16,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 193,
+                lineNumber: 15,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 192,
+            lineNumber: 14,
             columnNumber: 7
         }, this)
     }, void 0, false);
@@ -27400,7 +27234,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","./assets/global.css":"1hP5v","react-router-dom":"9xmpe","./pagelist/YourRentals":"4R5a8","./pagelist/Home":"klqGS","./page/AddRentals":"1Feow","./ui-components":"4LIXu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dXNgZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","react-router-dom":"9xmpe","./pagelist/YourRentals":"4R5a8","./pagelist/Home":"klqGS","./page/AddRentals":"1Feow","./ui-components":"4LIXu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./assets/App.css":"7qiOC"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -27987,7 +27821,7 @@ try {
     else Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"1hP5v":[function() {},{}],"9xmpe":[function(require,module,exports) {
+},{}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.15.0
  *
@@ -38585,26 +38419,26 @@ function SignInPrompt({ greeting, onClick }) {
                 children: "DIMORI!"
             }, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 42,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "Your contract is storing a greeting message in the NEAR blockchain. To change it you need to sign in using the NEAR Wallet. It is very simple, just use the button below."
+                children: "Design your best local trip"
             }, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 45,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: 'Do not worry, this app runs in the test network ("testnet"). It works just like the main network ("mainnet"), but using NEAR Tokens that are only for testing!'
+                children: "A decentralized home-sharing platform using cryptocurrency for payment."
             }, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 50,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 55,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -38616,12 +38450,12 @@ function SignInPrompt({ greeting, onClick }) {
                     children: "Sign in with NEAR Wallet"
                 }, void 0, false, {
                     fileName: "ui-components.js",
-                    lineNumber: 57,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 56,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         ]
@@ -38644,7 +38478,7 @@ function SignOutButton({ accountId, onClick }) {
         ]
     }, void 0, true, {
         fileName: "ui-components.js",
-        lineNumber: 65,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 }
@@ -38656,7 +38490,7 @@ function EducationalText() {
                 children: "Look at that! A Hello World app! This greeting is stored on the NEAR blockchain. Check it out:"
             }, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 74,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
@@ -38668,7 +38502,7 @@ function EducationalText() {
                                 children: "frontend/App.js"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 79,
+                                lineNumber: 42,
                                 columnNumber: 19
                             }, this),
                             " - you'll see ",
@@ -38676,7 +38510,7 @@ function EducationalText() {
                                 children: "getGreeting"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 79,
+                                lineNumber: 42,
                                 columnNumber: 61
                             }, this),
                             " and ",
@@ -38684,7 +38518,7 @@ function EducationalText() {
                                 children: "setGreeting"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 79,
+                                lineNumber: 42,
                                 columnNumber: 90
                             }, this),
                             " being called on ",
@@ -38692,14 +38526,14 @@ function EducationalText() {
                                 children: "contract"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 79,
+                                lineNumber: 42,
                                 columnNumber: 131
                             }, this),
                             ". What's this?"
                         ]
                     }, void 0, true, {
                         fileName: "ui-components.js",
-                        lineNumber: 78,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -38709,7 +38543,7 @@ function EducationalText() {
                                 children: "contract"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 82,
+                                lineNumber: 45,
                                 columnNumber: 28
                             }, this),
                             " code is defined in ",
@@ -38717,7 +38551,7 @@ function EducationalText() {
                                 children: "./contract"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 82,
+                                lineNumber: 45,
                                 columnNumber: 69
                             }, this),
                             " – this is the source code for your ",
@@ -38728,14 +38562,14 @@ function EducationalText() {
                                 children: "smart contract"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 82,
+                                lineNumber: 45,
                                 columnNumber: 128
                             }, this),
                             "."
                         ]
                     }, void 0, true, {
                         fileName: "ui-components.js",
-                        lineNumber: 81,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -38745,7 +38579,7 @@ function EducationalText() {
                                 children: "npm run deploy"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 84,
+                                lineNumber: 47,
                                 columnNumber: 24
                             }, this),
                             ", the code in ",
@@ -38753,7 +38587,7 @@ function EducationalText() {
                                 children: "./contract"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 84,
+                                lineNumber: 47,
                                 columnNumber: 65
                             }, this),
                             " gets deployed to the NEAR testnet. You can see how this happens by looking in ",
@@ -38761,25 +38595,25 @@ function EducationalText() {
                                 children: "package.json"
                             }, void 0, false, {
                                 fileName: "ui-components.js",
-                                lineNumber: 84,
+                                lineNumber: 47,
                                 columnNumber: 167
                             }, this),
                             "."
                         ]
                     }, void 0, true, {
                         fileName: "ui-components.js",
-                        lineNumber: 83,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "ui-components.js",
-                lineNumber: 77,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                 fileName: "ui-components.js",
-                lineNumber: 86,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -38792,7 +38626,7 @@ function EducationalText() {
                         children: "the NEAR docs"
                     }, void 0, false, {
                         fileName: "ui-components.js",
-                        lineNumber: 88,
+                        lineNumber: 51,
                         columnNumber: 37
                     }, this),
                     " or look through some ",
@@ -38803,14 +38637,14 @@ function EducationalText() {
                         children: "example apps"
                     }, void 0, false, {
                         fileName: "ui-components.js",
-                        lineNumber: 88,
+                        lineNumber: 51,
                         columnNumber: 141
                     }, this),
                     "."
                 ]
             }, void 0, true, {
                 fileName: "ui-components.js",
-                lineNumber: 87,
+                lineNumber: 50,
                 columnNumber: 7
             }, this)
         ]
@@ -38978,17 +38812,16 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _runtime = require("regenerator-runtime/runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactBootstrap = require("react-bootstrap");
-var _globalCss = require("../assets/global.css");
+var _reactRouterDom = require("react-router-dom");
+var _rentalsCss = require("../assets/Rentals.css");
 var _booking = require("../page/Booking");
 var _bookingDefault = parcelHelpers.interopDefault(_booking);
+var _dimoriLogoPng = require("../assets/dimori-logo.png");
+var _dimoriLogoPngDefault = parcelHelpers.interopDefault(_dimoriLogoPng);
 var _uiComponents = require("../ui-components");
 var _s = $RefreshSig$();
 function Home({ isSignedIn, contractId, wallet }) {
     _s();
-    const [showBooking, setShowBooking] = (0, _react.useState)(false);
-    const handleCloseBooking = ()=>setShowBooking(false);
-    const handleShowBooking = ()=>setShowBooking(true);
     const [valueFromBlockchain, setValueFromBlockchain] = (0, _react.useState)([]);
     const getRentalsList = async ()=>{
         const rentals = await getGreeting();
@@ -39004,7 +38837,7 @@ function Home({ isSignedIn, contractId, wallet }) {
         onClick: ()=>wallet.signIn()
     }, void 0, false, {
         fileName: "pagelist/Home.js",
-        lineNumber: 30,
+        lineNumber: 26,
         columnNumber: 12
     }, this);
     function getGreeting() {
@@ -39016,263 +38849,298 @@ function Home({ isSignedIn, contractId, wallet }) {
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uiComponents.SignOutButton), {
-                accountId: wallet.accountId,
-                onClick: ()=>wallet.signOut()
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "topBanner",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "logo",
+                                src: (0, _dimoriLogoPngDefault.default),
+                                alt: "logo",
+                                style: {
+                                    height: "70px"
+                                }
+                            }, void 0, false, {
+                                fileName: "pagelist/Home.js",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "pagelist/Home.js",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "pagelist/Home.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        class: "headerText",
+                        children: "All Rentals"
+                    }, void 0, false, {
+                        fileName: "pagelist/Home.js",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "lrContainers",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uiComponents.SignOutButton), {
+                            accountId: wallet.accountId,
+                            onClick: ()=>wallet.signOut()
+                        }, void 0, false, {
+                            fileName: "pagelist/Home.js",
+                            lineNumber: 52,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "pagelist/Home.js",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "pagelist/Home.js",
-                lineNumber: 43,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
-            valueFromBlockchain.map((e, i)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "itemDiv",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "rentalInfo",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "rentalsContent",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "newContainer",
+                    children: valueFromBlockchain.map((e, i)=>{
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "itemDiv",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "rentalTitle",
-                                    children: e.name.toUpperCase()
-                                }, void 0, false, {
-                                    fileName: "pagelist/Home.js",
-                                    lineNumber: 51,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "rentalInformation",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: "Ten phong na:"
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 56,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: e.name
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 57,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "pagelist/Home.js",
-                                                    lineNumber: 55,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: "Dia chi na:"
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 60,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: e.address
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 61,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "pagelist/Home.js",
-                                                    lineNumber: 59,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: "Place"
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 64,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: e.city
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 65,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "pagelist/Home.js",
-                                                    lineNumber: 63,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: "Theme:"
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 68,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: e.theme
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 69,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
+                                    className: "rentalDiv",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "rentalInfo",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "rentalTitle",
+                                                children: e.name.toUpperCase()
+                                            }, void 0, false, {
+                                                fileName: "pagelist/Home.js",
+                                                lineNumber: 65,
+                                                columnNumber: 21
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "rentalInformation",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                                                    className: "pure-table pure-table-horizontal marginTable",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: "Ten phong na:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 70,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: e.name
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 71,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "pagelist/Home.js",
+                                                                lineNumber: 69,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: "Dia chi na:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 74,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: e.address
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 75,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "pagelist/Home.js",
+                                                                lineNumber: 73,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: "Place"
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 78,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: e.city
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 79,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "pagelist/Home.js",
+                                                                lineNumber: 77,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: "Theme:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 82,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: e.theme
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 83,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "pagelist/Home.js",
+                                                                lineNumber: 81,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: "Desc"
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 86,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: e.description
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 87,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "pagelist/Home.js",
+                                                                lineNumber: 85,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: "Gia phong moi dem"
+                                                                    }, void 0, false, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 90,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                                        children: [
+                                                                            e.price,
+                                                                            " NEAR"
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "pagelist/Home.js",
+                                                                        lineNumber: 91,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "pagelist/Home.js",
+                                                                lineNumber: 89,
+                                                                columnNumber: 27
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "pagelist/Home.js",
+                                                        lineNumber: 68,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
                                                     fileName: "pagelist/Home.js",
                                                     lineNumber: 67,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: "Desc"
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 72,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: e.description
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 73,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "pagelist/Home.js",
-                                                    lineNumber: 71,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: "Gia phong moi dem"
-                                                        }, void 0, false, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 76,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                            children: [
-                                                                e.price,
-                                                                " NEAR"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "pagelist/Home.js",
-                                                            lineNumber: 77,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "pagelist/Home.js",
-                                                    lineNumber: 75,
-                                                    columnNumber: 21
+                                                    columnNumber: 23
                                                 }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "pagelist/Home.js",
-                                            lineNumber: 54,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, void 0, false, {
+                                            }, void 0, false, {
+                                                fileName: "pagelist/Home.js",
+                                                lineNumber: 66,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "pagelist/Home.js",
-                                        lineNumber: 53,
-                                        columnNumber: 17
+                                        lineNumber: 64,
+                                        columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "pagelist/Home.js",
-                                    lineNumber: 52,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "pagelist/Home.js",
-                            lineNumber: 50,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "btn btn-secondary",
-                                    onClick: handleShowBooking,
-                                    children: "Booking"
-                                }, void 0, false, {
-                                    fileName: "pagelist/Home.js",
-                                    lineNumber: 84,
-                                    columnNumber: 15
+                                    lineNumber: 63,
+                                    columnNumber: 17
                                 }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Modal), {
-                                    show: showBooking,
-                                    onHide: handleCloseBooking,
-                                    size: "xl",
-                                    centered: true,
-                                    scrollable: true,
-                                    animation: true,
-                                    dialogClassName: "booking-modal",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Modal).Header, {
-                                            closeButton: true,
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Modal).Title, {
-                                                children: "Booking"
-                                            }, void 0, false, {
-                                                fileName: "pagelist/Home.js",
-                                                lineNumber: 97,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "pagelist/Home.js",
-                                            lineNumber: 96,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Modal).Body, {
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bookingDefault.default), {
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "btn btn-secondary",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Route, {
+                                            path: "/booking",
+                                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bookingDefault.default), {
                                                 contractId: contractId,
                                                 wallet: wallet,
                                                 home_id: e.home_id
-                                            }, void 0, false, {
-                                                fileName: "pagelist/Home.js",
-                                                lineNumber: 100,
-                                                columnNumber: 19
-                                            }, this)
+                                            }, void 0, false, void 0, void 0)
                                         }, void 0, false, {
                                             fileName: "pagelist/Home.js",
-                                            lineNumber: 99,
-                                            columnNumber: 17
+                                            lineNumber: 100,
+                                            columnNumber: 21
                                         }, this)
-                                    ]
-                                }, void 0, true, {
+                                    }, void 0, false, {
+                                        fileName: "pagelist/Home.js",
+                                        lineNumber: 99,
+                                        columnNumber: 19
+                                    }, this)
+                                }, void 0, false, {
                                     fileName: "pagelist/Home.js",
-                                    lineNumber: 87,
-                                    columnNumber: 15
+                                    lineNumber: 98,
+                                    columnNumber: 17
                                 }, this)
                             ]
-                        }, void 0, true, {
+                        }, i, true, {
                             fileName: "pagelist/Home.js",
-                            lineNumber: 83,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, i, true, {
+                            lineNumber: 62,
+                            columnNumber: 15
+                        }, this);
+                    })
+                }, void 0, false, {
                     fileName: "pagelist/Home.js",
-                    lineNumber: 49,
-                    columnNumber: 11
-                }, this);
-            })
+                    lineNumber: 59,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "pagelist/Home.js",
+                lineNumber: 58,
+                columnNumber: 7
+            }, this)
         ]
     }, void 0, true);
 }
-_s(Home, "PcTX99uOB4XmYR9fAb2Rl+K7iTs=");
+_s(Home, "3F3In3fBfPfrXW5FKlFRSKXePcw=");
 _c = Home;
 exports.default = Home;
 var _c;
@@ -39283,7 +39151,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","react-bootstrap":"3AD9A","../assets/global.css":"1hP5v","../page/Booking":"aVETy","../ui-components":"4LIXu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1hP5v":[function() {},{}],"aVETy":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","../page/Booking":"aVETy","../ui-components":"4LIXu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/Rentals.css":"gfYeB","../assets/dimori-logo.png":"405zB","react-router-dom":"9xmpe"}],"aVETy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$db36 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39297,7 +39165,7 @@ var _runtime = require("regenerator-runtime/runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _globalCss = require("../assets/global.css");
+var _popupCss = require("../assets/Popup.css");
 var _s = $RefreshSig$();
 function Booking({ contractId, wallet, home_id }) {
     _s();
@@ -39397,7 +39265,7 @@ function Booking({ contractId, wallet, home_id }) {
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "Save"
+                                children: "Book"
                             }, void 0, false, {
                                 fileName: "page/Booking.js",
                                 lineNumber: 69,
@@ -39444,7 +39312,45 @@ $RefreshReg$(_c, "Booking");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","react-router-dom":"9xmpe","../assets/global.css":"1hP5v","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1hP5v":[function() {},{}],"1Feow":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/Popup.css":"4zmXb"}],"4zmXb":[function() {},{}],"gfYeB":[function() {},{}],"405zB":[function(require,module,exports) {
+module.exports = require("c201676a800bf3f9").getBundleURL("UckoE") + "dimori-logo.f963a052.png" + "?" + Date.now();
+
+},{"c201676a800bf3f9":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"1Feow":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5513 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39458,7 +39364,7 @@ var _runtime = require("regenerator-runtime/runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
-var _globalCss = require("../assets/global.css");
+var _addRentalsCss = require("../assets/AddRentals.css");
 var _uiComponents = require("../ui-components");
 var _s = $RefreshSig$();
 function AddRentals({ isSignedIn, contractId, wallet }) {
@@ -39498,28 +39404,45 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
         });
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uiComponents.SignOutButton), {
-                accountId: wallet.accountId,
-                onClick: ()=>wallet.signOut()
-            }, void 0, false, {
-                fileName: "page/AddRentals.js",
-                lineNumber: 50,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
-                className: uiPleaseWait ? "please-wait" : "",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                    onSubmit: addHome,
-                    className: "change",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
+            className: uiPleaseWait ? "please-wait" : "",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "topBanner",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            children: "Add home:"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uiComponents.SignOutButton), {
+                            accountId: wallet.accountId,
+                            onClick: ()=>wallet.signOut()
+                        }, void 0, false, {
+                            fileName: "page/AddRentals.js",
+                            lineNumber: 52,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            class: "headerText",
+                            children: "Add your Rental"
                         }, void 0, false, {
                             fileName: "page/AddRentals.js",
                             lineNumber: 56,
                             columnNumber: 11
-                        }, this),
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "page/AddRentals.js",
+                    lineNumber: 51,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                    className: "line1"
+                }, void 0, false, {
+                    fileName: "page/AddRentals.js",
+                    lineNumber: 58,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    onSubmit: addHome,
+                    className: "change",
+                    children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "addRentalContent row",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39527,6 +39450,7 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "rentalContent col-8",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                                        className: "pure-table pure-table-horizontal marginTable",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
                                             children: [
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -39539,12 +39463,12 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "home name"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 64,
+                                                                lineNumber: 67,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 63,
+                                                            lineNumber: 66,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -39555,18 +39479,18 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "home address"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 72,
+                                                                lineNumber: 75,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 71,
+                                                            lineNumber: 74,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "page/AddRentals.js",
-                                                    lineNumber: 62,
+                                                    lineNumber: 65,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -39579,12 +39503,12 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "city"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 82,
+                                                                lineNumber: 85,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 81,
+                                                            lineNumber: 84,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -39595,18 +39519,18 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "image"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 90,
+                                                                lineNumber: 93,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 89,
+                                                            lineNumber: 92,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "page/AddRentals.js",
-                                                    lineNumber: 80,
+                                                    lineNumber: 83,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -39619,12 +39543,12 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "home theme"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 100,
+                                                                lineNumber: 103,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 99,
+                                                            lineNumber: 102,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -39635,25 +39559,25 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "description"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 108,
+                                                                lineNumber: 111,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 107,
+                                                            lineNumber: 110,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "page/AddRentals.js",
-                                                    lineNumber: 98,
+                                                    lineNumber: 101,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
                                                     children: [
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {}, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 117,
+                                                            lineNumber: 120,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -39665,44 +39589,44 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                                                 placeholder: "home price"
                                                             }, void 0, false, {
                                                                 fileName: "page/AddRentals.js",
-                                                                lineNumber: 119,
+                                                                lineNumber: 122,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "page/AddRentals.js",
-                                                            lineNumber: 118,
+                                                            lineNumber: 121,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "page/AddRentals.js",
-                                                    lineNumber: 116,
+                                                    lineNumber: 119,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "page/AddRentals.js",
-                                            lineNumber: 61,
+                                            lineNumber: 64,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "page/AddRentals.js",
-                                        lineNumber: 60,
+                                        lineNumber: 63,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "page/AddRentals.js",
-                                    lineNumber: 59,
+                                    lineNumber: 62,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "page/AddRentals.js",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "page/AddRentals.js",
-                            lineNumber: 57,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39711,35 +39635,35 @@ function AddRentals({ isSignedIn, contractId, wallet }) {
                                     children: "Save"
                                 }, void 0, false, {
                                     fileName: "page/AddRentals.js",
-                                    lineNumber: 134,
+                                    lineNumber: 137,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "loader"
                                 }, void 0, false, {
                                     fileName: "page/AddRentals.js",
-                                    lineNumber: 135,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "page/AddRentals.js",
-                            lineNumber: 133,
+                            lineNumber: 136,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "page/AddRentals.js",
-                    lineNumber: 55,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, this)
-            }, void 0, false, {
-                fileName: "page/AddRentals.js",
-                lineNumber: 54,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true);
+            ]
+        }, void 0, true, {
+            fileName: "page/AddRentals.js",
+            lineNumber: 50,
+            columnNumber: 7
+        }, this)
+    }, void 0, false);
 }
 _s(AddRentals, "9q2kjWkfLpXcLZ+rVRgJCSLmh/8=", false, function() {
     return [
@@ -39756,7 +39680,7 @@ $RefreshReg$(_c, "AddRentals");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","react-router-dom":"9xmpe","../assets/global.css":"1hP5v","../ui-components":"4LIXu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1hP5v":[function() {},{}],"dg9wB":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","regenerator-runtime/runtime":"dXNgZ","react":"21dqq","react-router-dom":"9xmpe","../ui-components":"4LIXu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/AddRentals.css":"6YuGj"}],"6YuGj":[function() {},{}],"7qiOC":[function() {},{}],"dg9wB":[function(require,module,exports) {
 /* A helper file that simplifies using the wallet selector */ // near api js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -52414,41 +52338,6 @@ module.exports = function(loader, type) {
         });
     };
 };
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
 
 },{}],"kzXVU":[function(require,module,exports) {
 "use strict";
